@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_watch_later_black_24dp"
+            android:title="Waiting" />
+        <item
+            android:id="@+id/nav_del"
+            android:icon="@drawable/re"
+            android:title="Received" />
+        <item
+            android:id="@+id/nav_can"
+            android:icon="@drawable/ic_cancel_black_24dp"
+            android:title="Canceled" />
+        <item
+            android:id="@+id/rejected"
+            android:icon="@drawable/ic_regected"
+            android:title="Rejected" />
+    </group>
+    <item android:title="Help and Settings">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_live_help_black_24dp"
+                android:title="Help" />
+            <item
+                android:id="@+id/settings"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="Settings" />
+        </menu>
+    </item>
+
+</menu>

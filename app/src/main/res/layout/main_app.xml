@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.commit451.elasticdragdismisslayout.ElasticDragDismissLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/draggable_frame"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:dragDismissDistance="112dp"
+    app:dragDismissScale="0.95">
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+        <moe.feng.common.stepperview.VerticalStepperItemView
+            android:id="@+id/stepper_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@raw/product"
+            android:layout_marginTop="24dp"
+            app:step_index="1"
+            app:step_title="Delivery Location"
+            app:step_summary_done="Name"
+            app:step_state="selected">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:scrollbars="none"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:id="@+id/titleAdd"
+                        android:fontFamily="@raw/product"
+                        android:layout_marginTop="12dp"
+                        android:text="Where do you want your item(s) Delivered ?"/>
+                    <EditText
+                        android:layout_width="300dp"
+                        android:fontFamily="@raw/product"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:overScrollMode="always"
+                        android:id="@+id/track"
+                        android:textColorHint="#000"
+                        android:textStyle="normal"
+                        android:paddingLeft="10dp"
+                        android:hint="e.g 10, Akinyemi street" />
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/hubName"
+                        android:layout_width="@dimen/_220sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:entries="@array/hubs"
+                        android:fontFamily="@raw/product"
+                        android:hint="@string/surname"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:popupBackground="#000"
+                        android:spinnerMode="dialog"
+                        android:textColor="#000"
+                        android:textColorHint="#000" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:text="Next"
+                            android:fontFamily="@raw/product"
+                            android:id="@+id/next1"
+                            android:textAllCaps="false" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+
+        </moe.feng.common.stepperview.VerticalStepperItemView>
+
+
+        <moe.feng.common.stepperview.VerticalStepperItemView
+            android:id="@+id/stepper_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@raw/product"
+            app:step_index="2"
+            app:step_title="Item Description">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@raw/product"
+                    android:text="Please enter appropriately"
+                    android:textColor="#000" />
+
+                <EditText
+                    android:id="@+id/nameNew"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@raw/product"
+                    android:hint="Receipent"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:textColorHint="#000" />
+
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@raw/product"
+                    android:hint="Recepient Phone"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:textColorHint="#000" />
+
+                <EditText
+                    android:id="@+id/desc"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@raw/product"
+                    android:hint="Item Description"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:textColorHint="#000" />
+
+                <EditText
+                    android:id="@+id/qty"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@raw/product"
+                    android:hint="Quantity"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:textColorHint="#000" />
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:id="@+id/type"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:text="Postpaid"
+                        android:id="@+id/postpaid"
+                        android:fontFamily="@raw/product"
+                        android:checked="true"
+                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:text="Prepaid"
+                        android:id="@+id/prepaid"
+                        android:fontFamily="@raw/product"
+                        android:layout_marginLeft="0dp"
+                        android:layout_height="wrap_content" />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@raw/product"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button_prev_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@raw/product"
+                        android:text="Back"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/button_next_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:fontFamily="@raw/product"
+                        android:text="Next"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </moe.feng.common.stepperview.VerticalStepperItemView>
+        <moe.feng.common.stepperview.VerticalStepperItemView
+            android:fontFamily="@raw/product"
+            android:id="@+id/stepper_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:step_index="3"
+            app:step_title="Billing"
+            app:step_is_last="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@raw/product"
+                    android:text="Total Cost: NGN 300"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/button_prev_2"
+                        android:textAllCaps="false"
+                        android:fontFamily="@raw/product"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Previous"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@android:color/white"
+                        android:text="Proceed"
+                        android:fontFamily="@raw/product"
+                        android:id="@+id/submit"
+                        android:textAllCaps="false"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </moe.feng.common.stepperview.VerticalStepperItemView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+</com.commit451.elasticdragdismisslayout.ElasticDragDismissLinearLayout>
